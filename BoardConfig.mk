@@ -81,7 +81,7 @@ BOARD_KERNEL_CMDLINE += earlycon=msm_serial_dm,0xc170000 androidboot.hardware=qc
 BOARD_KERNEL_CMDLINE += user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3
 BOARD_KERNEL_CMDLINE += sched_enable_hmp=1 sched_enable_power_aware=1
 BOARD_KERNEL_CMDLINE += service_locator.enable=1 swiotlb=1 loop.max_part=7
-#BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_BASE        := 0x00000000
 BOARD_KERNEL_PAGESIZE    := 4096
 BOARD_MKBOOTIMG_ARGS := --header_version 1
@@ -123,6 +123,10 @@ TARGET_TAP_TO_WAKE_NODE := "/proc/tpd_gesture"
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/etc/fstab.qcom
+
+# SELinux
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/minimal_sepolicy
+SELINUX_IGNORE_NEVERALLOWS := true
 
 # Symlinks
 TARGET_MOUNT_POINTS_SYMLINKS := true
