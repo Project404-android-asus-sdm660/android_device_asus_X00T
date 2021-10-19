@@ -435,5 +435,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/wlan/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
 
+# XML
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.sys.binary_xml=false
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/asus/X00T/X00T-vendor.mk)
