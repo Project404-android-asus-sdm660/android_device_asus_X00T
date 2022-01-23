@@ -529,6 +529,12 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
+    <!-- Service Tracker -->
+    <hal format="hidl">
+	<name>vendor.qti.hardware.servicetracker</name>
+	<transport>hwbinder</transport>
+	<fqname>@1.2::IServicetracker/default</fqname>
+    </hal>
     <!--  Soter service -->
     <hal format="hidl">
         <name>vendor.qti.hardware.soter</name>
