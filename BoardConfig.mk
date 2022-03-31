@@ -95,6 +95,9 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/etc/fstab.qcom
 
+# Symlinks
+TARGET_MOUNT_POINTS_SYMLINKS := true
+
 # Treble
 BOARD_VNDK_VERSION := current
 
