@@ -37,6 +37,11 @@ TARGET_SCREEN_DENSITY := 420
 # GPS
 LOC_HIDL_VERSION := 4.0
 
+# HIDL
+DEVICE_MANIFEST_FILE += \
+    $(DEVICE_PATH)/manifest.xml \
+DEVICE_MATRIX_FILE += device/qcom/common/compatibility_matrix.xml
+
 # Kernel
 TARGET_KERNEL_CONFIG := X00TD_defconfig
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 androidboot.console=ttyMSM0
