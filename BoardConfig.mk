@@ -63,6 +63,9 @@ DEVICE_MATRIX_FILE += device/qcom/common/compatibility_matrix.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(DEVICE_PATH)/configs/manifests/device_framework_compatibility_matrix.xml
 
+ODM_MANIFEST_SKUS += NFC
+ODM_MANIFEST_NFC_FILES := $(DEVICE_PATH)/configs/vintf/manifest-nfc.xml
+
 # Kernel
 TARGET_KERNEL_CONFIG := X00TD_defconfig
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 androidboot.console=ttyMSM0
