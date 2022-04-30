@@ -206,6 +206,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     fstab.qcom \
+    init.asus.rc \
     init.asus.biometrics.rc \
     init.qcom.asus.rc \
     init.target.rc

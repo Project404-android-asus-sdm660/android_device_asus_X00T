@@ -56,3 +56,10 @@ sh_binary {
     src: "bin/init.btmac.sh",
     vendor: true,
 }
+
+prebuilt_etc {
+    name: "init.asus.rc",
+    src: "etc/init.asus.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
