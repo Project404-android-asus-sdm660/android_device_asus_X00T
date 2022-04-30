@@ -283,7 +283,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AsusSDM660Bluetooth \
     AsusSDM660Frameworks \
-    AsusSDM660Settings
+    AsusSDM660Settings \
+    X00TDFrameworksResTarget \
+    X00TDWifiOverlay
 
 # Public Libraries
 PRODUCT_COPY_FILES += \
