@@ -117,6 +117,9 @@ TARGET_COPY_OUT_VENDOR := vendor
 BOARD_ROOT_EXTRA_SYMLINKS := \
     /mnt/vendor/persist:/persist
 
+# Power
+TARGET_TAP_TO_WAKE_NODE := "/proc/tpd_gesture"
+
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/etc/fstab.qcom
 
