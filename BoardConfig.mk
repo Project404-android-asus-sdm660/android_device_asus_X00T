@@ -37,6 +37,26 @@ TARGET_SCREEN_DENSITY := 420
 # GPS
 LOC_HIDL_VERSION := 4.0
 
+# Kernel
+TARGET_KERNEL_CONFIG := X00TD_defconfig
+BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 androidboot.console=ttyMSM0
+BOARD_KERNEL_CMDLINE += earlycon=msm_serial_dm,0xc170000 androidboot.hardware=qcom
+BOARD_KERNEL_CMDLINE += user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3
+BOARD_KERNEL_CMDLINE += sched_enable_hmp=1 sched_enable_power_aware=1
+BOARD_KERNEL_CMDLINE += service_locator.enable=1 swiotlb=1 loop.max_part=7
+#BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+BOARD_KERNEL_BASE        := 0x00000000
+BOARD_KERNEL_PAGESIZE    := 4096
+BOARD_MKBOOTIMG_ARGS := --header_version 1
+TARGET_KERNEL_APPEND_DTB := true
+TARGET_KERNEL_ARCH := arm64
+TARGET_KERNEL_HEADER_ARCH := arm64
+TARGET_KERNEL_SOURCE := kernel/asus/sdm660
+TARGET_KERNEL_VERSION := 4.4
+KERNEL_SD_LLVM_SUPPORT := true
+TARGET_USES_UNCOMPRESSED_KERNEL := false
+TARGET_COMPILE_WITH_MSM_KERNEL := true
+
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
